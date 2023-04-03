@@ -9,6 +9,7 @@ This software exists for two reasons:
 
 The importance of having a simple search utility that does something as basic as *search an entire directory tree* with a no-nonsense GUI is apparently lost on Microsoft.  I don't care about what is indexed.  I don't care about searching file contents.  I don't care about searching the web.  I just want a dumb search program with partial text matching on filenames.  Also I miss Rover.
 
-Icon by [Payungkead - Flaticon](https://www.flaticon.com/free-icon/analysis_4420116)
+Icon by [Freepik - Flaticon](https://www.flaticon.com/free-icon/search_3979322)
 
 Rover from https://www.comicsans.love/
+

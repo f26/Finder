@@ -6,11 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>analysis.ico</ApplicationIcon>
+    <ApplicationIcon>search.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="analysis.ico" />
+    <Content Include="search.ico" />
   </ItemGroup>
 
   <ItemGroup>
