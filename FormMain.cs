@@ -12,6 +12,7 @@ namespace Finder
         private bool _findTimeNewerThan = true;
         private string _errorLog = "";
         private Color _defaultLabelColor = Color.Black;
+        private bool _caseSensitive = false;
 
         public FormMain()
         {
@@ -36,8 +37,12 @@ namespace Finder
 
         private List<FSItem> GetFSItems(string needle, DirectoryInfo haystack)
         {
+            StringComparison comparisonMethod = StringComparison.OrdinalIgnoreCase;
+            if (_caseSensitive) comparisonMethod = StringComparison.Ordinal;
+
             List<FSItem> items = new List<FSItem>();
-            if (haystack.Name.Contains(needle))
+
+            if (haystack.Name.Contains(needle, comparisonMethod))
             {
                 items.Add(new FSItem(haystack));
                 _count++;
@@ -64,7 +69,7 @@ namespace Finder
             {
                 foreach (FileInfo finfo in haystack.GetFiles())
                 {
-                    if (!finfo.Name.Contains(needle)) continue;
+                    if (!finfo.Name.Contains(needle, comparisonMethod)) continue;
 
                     bool includeIt = true;
 
@@ -217,6 +222,8 @@ namespace Finder
                 }
             }
             catch { }
+
+            _caseSensitive = checkBoxCaseSensitive.Checked;
         }
 
         private void olv_MouseClick(object sender, MouseEventArgs e)
@@ -279,7 +286,7 @@ namespace Finder
                     }
                     else
                     {
-                        throw new Exception("Deletion of directories is not supported");
+                        Directory.Delete(fsitem.ToString(), true);
                     }
 
                 }

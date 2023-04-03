@@ -59,6 +59,7 @@ namespace Finder
             textBoxTimeLimit = new TextBox();
             comboBoxTimeUnit = new ComboBox();
             pictureBoxRover = new PictureBox();
+            checkBoxCaseSensitive = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)olv).BeginInit();
             statusStrip1.SuspendLayout();
             groupBoxLimitSize.SuspendLayout();
@@ -68,15 +69,15 @@ namespace Finder
             // 
             // textBoxSearchText
             // 
-            textBoxSearchText.Location = new Point(81, 12);
+            textBoxSearchText.Location = new Point(63, 12);
             textBoxSearchText.Name = "textBoxSearchText";
-            textBoxSearchText.Size = new Size(289, 23);
+            textBoxSearchText.Size = new Size(231, 23);
             textBoxSearchText.TabIndex = 0;
             textBoxSearchText.KeyUp += textBoxSearchText_KeyUp;
             // 
             // buttonFind
             // 
-            buttonFind.Location = new Point(376, 12);
+            buttonFind.Location = new Point(300, 12);
             buttonFind.Name = "buttonFind";
             buttonFind.Size = new Size(75, 23);
             buttonFind.TabIndex = 1;
@@ -157,7 +158,7 @@ namespace Finder
             // labelCount
             // 
             labelCount.AutoSize = true;
-            labelCount.Location = new Point(376, 59);
+            labelCount.Location = new Point(397, 45);
             labelCount.Name = "labelCount";
             labelCount.Size = new Size(45, 15);
             labelCount.TabIndex = 4;
@@ -167,17 +168,17 @@ namespace Finder
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(44, 59);
+            label1.Location = new Point(8, 44);
             label1.Name = "label1";
-            label1.Size = new Size(31, 15);
+            label1.Size = new Size(34, 15);
             label1.TabIndex = 5;
-            label1.Text = "Path";
+            label1.Text = "Path:";
             // 
             // textBoxSearchPath
             // 
-            textBoxSearchPath.Location = new Point(81, 56);
+            textBoxSearchPath.Location = new Point(63, 42);
             textBoxSearchPath.Name = "textBoxSearchPath";
-            textBoxSearchPath.Size = new Size(289, 23);
+            textBoxSearchPath.Size = new Size(328, 23);
             textBoxSearchPath.TabIndex = 6;
             textBoxSearchPath.Text = "C:\\Users\\";
             textBoxSearchPath.KeyUp += textBoxSearchText_KeyUp;
@@ -187,9 +188,9 @@ namespace Finder
             label2.AutoSize = true;
             label2.Location = new Point(12, 16);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(45, 15);
             label2.TabIndex = 7;
-            label2.Text = "Search for:";
+            label2.Text = "Search:";
             // 
             // groupBoxLimitSize
             // 
@@ -328,11 +329,22 @@ namespace Finder
             pictureBoxRover.TabStop = false;
             pictureBoxRover.Visible = false;
             // 
+            // checkBoxCaseSensitive
+            // 
+            checkBoxCaseSensitive.AutoSize = true;
+            checkBoxCaseSensitive.Location = new Point(381, 14);
+            checkBoxCaseSensitive.Name = "checkBoxCaseSensitive";
+            checkBoxCaseSensitive.Size = new Size(99, 19);
+            checkBoxCaseSensitive.TabIndex = 23;
+            checkBoxCaseSensitive.Text = "Case sensitive";
+            checkBoxCaseSensitive.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1216, 469);
+            Controls.Add(checkBoxCaseSensitive);
             Controls.Add(pictureBoxRover);
             Controls.Add(groupBoxLimitTime);
             Controls.Add(checkBoxTimeLimit);
@@ -388,5 +400,6 @@ namespace Finder
         private TextBox textBoxTimeLimit;
         private ComboBox comboBoxTimeUnit;
         private PictureBox pictureBoxRover;
+        private CheckBox checkBoxCaseSensitive;
     }
 }
