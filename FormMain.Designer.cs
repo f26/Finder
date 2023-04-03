@@ -158,7 +158,7 @@ namespace Finder
             // labelCount
             // 
             labelCount.AutoSize = true;
-            labelCount.Location = new Point(397, 45);
+            labelCount.Location = new Point(397, 59);
             labelCount.Name = "labelCount";
             labelCount.Size = new Size(45, 15);
             labelCount.TabIndex = 4;
@@ -168,7 +168,7 @@ namespace Finder
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(8, 44);
+            label1.Location = new Point(23, 59);
             label1.Name = "label1";
             label1.Size = new Size(34, 15);
             label1.TabIndex = 5;
@@ -176,7 +176,7 @@ namespace Finder
             // 
             // textBoxSearchPath
             // 
-            textBoxSearchPath.Location = new Point(63, 42);
+            textBoxSearchPath.Location = new Point(63, 56);
             textBoxSearchPath.Name = "textBoxSearchPath";
             textBoxSearchPath.Size = new Size(328, 23);
             textBoxSearchPath.TabIndex = 6;
